@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'First-Application';
+  data = 'New Data is here!'
+
+  getFuncationData() {
+    return 'This is a function';
+  }
+
+  number = 100
 }
