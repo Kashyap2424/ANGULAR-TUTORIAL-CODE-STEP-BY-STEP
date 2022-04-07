@@ -6,12 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'Getting Value Form Input Box';
+  title = 'Create Counter';
   data = 'New Data is here!';
 
-  inputData = '';
+  counterValue = 0;
 
-  getInputData(data: string) {
-    this.inputData = data;
+  counterFuncation(parameter: string) {
+    if (parameter === 'increment') {
+      this.counterValue++;
+    } else {
+      this.counterValue--;
+    }
   }
 }
