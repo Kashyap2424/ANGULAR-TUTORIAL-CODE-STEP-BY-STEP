@@ -14,4 +14,8 @@ export class AppComponent {
   }
 
   number = 100;
+
+  getData(data: string) {
+    console.warn(`Funcation Called & Got value from user: ${data}`);
+  }
 }

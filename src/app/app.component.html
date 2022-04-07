@@ -2,4 +2,50 @@
 
 <h1>Hello, Angular {{ title }}</h1>
 
-<button (click)="getFuncation('kashyap')">Click by Kashyap</button>
+<button (click)="getData('funcation click')">Click & Call Funcation</button>
+
+<!-- KeyUp Event -->
+<br />
+<br />
+<input
+  type="text"
+  #input1
+  placeholder="Enter Your Name Here...(keyup event)"
+  (keyup)="getData(input1.value)"
+/>
+
+<!-- KeyDown Event -->
+<br />
+<br />
+<input
+  type="text"
+  #input2
+  placeholder="Enter Your Name Here... (keydown event)"
+  (keydown)="getData(input2.value)"
+/>
+
+<!-- Blur Event -->
+<br />
+<br />
+<input
+  type="text"
+  #input3
+  placeholder="Enter Your Name Here... (blur event)"
+  (blur)="getData(input3.value)"
+/>
+
+<!-- Input Event -->
+<br />
+<br />
+<input
+  type="text"
+  #input4
+  placeholder="Enter Your Name Here... (blur event)"
+  (input)="getData(input4.value)"
+/>
+
+<!-- Mouse Over Event -->
+<h1 (mouseover)="getData('Mouse Over Event')">Mouse Over Event</h1>
+
+<!-- Mouse Leave Event -->
+<h1 (mouseleave)="getData('Mouse Leave Event')">Mouse Leave Event</h1>
