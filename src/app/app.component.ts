@@ -6,16 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'First-Application';
+  title = 'Getting Value Form Input Box';
   data = 'New Data is here!';
 
-  getFuncation(name: string) {
-    alert(`This is clicked from: ${name}`);
-  }
+  inputData = '';
 
-  number = 100;
-
-  getData(data: string) {
-    console.warn(`Funcation Called & Got value from user: ${data}`);
+  getInputData(data: string) {
+    this.inputData = data;
   }
 }

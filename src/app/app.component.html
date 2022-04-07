@@ -1,51 +1,20 @@
-<!-- What we can do in INTERPOLATION -->
-
-<h1>Hello, Angular {{ title }}</h1>
-
-<button (click)="getData('funcation click')">Click & Call Funcation</button>
+<h1>{{ title }}</h1>
 
 <!-- KeyUp Event -->
 <br />
 <br />
-<input
-  type="text"
-  #input1
-  placeholder="Enter Your Name Here...(keyup event)"
-  (keyup)="getData(input1.value)"
-/>
 
-<!-- KeyDown Event -->
-<br />
-<br />
-<input
-  type="text"
-  #input2
-  placeholder="Enter Your Name Here... (keydown event)"
-  (keydown)="getData(input2.value)"
-/>
+<input type="text" name="input" #input placeholder="Enter Your Name Here..." />
 
-<!-- Blur Event -->
-<br />
-<br />
-<input
-  type="text"
-  #input3
-  placeholder="Enter Your Name Here... (blur event)"
-  (blur)="getData(input3.value)"
-/>
+<!-- Getting value onClick -->
+<button (click)="getInputData(input.value)">Get Value</button>
 
-<!-- Input Event -->
-<br />
-<br />
-<input
-  type="text"
-  #input4
-  placeholder="Enter Your Name Here... (blur event)"
-  (input)="getData(input4.value)"
-/>
+<!-- Getting Field's Name Value -->
+<button (click)="getInputData(input.name)">Get Field Name</button>
 
-<!-- Mouse Over Event -->
-<h1 (mouseover)="getData('Mouse Over Event')">Mouse Over Event</h1>
+<!-- Getting Field's Placeholder Value -->
+<button (click)="getInputData(input.placeholder)">
+  Get Field Placeholder Text
+</button>
 
-<!-- Mouse Leave Event -->
-<h1 (mouseleave)="getData('Mouse Leave Event')">Mouse Leave Event</h1>
+<h3>Input box value: {{ inputData }}</h3>
