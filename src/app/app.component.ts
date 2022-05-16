@@ -6,66 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'For Loop';
+  title = 'Style Binding';
 
-  users = [
-    {
-      name: 'Haresh',
-      age: 39,
-      socialAccounts: [
-        {
-          name: 'Facebook',
-          url: 'https://www.facebook.com/',
-        },
-        {
-          name: 'Twitter',
-          url: 'https://www.twitter.com/',
-        },
-      ],
-    },
-    {
-      name: 'Rita',
-      age: 38,
-      socialAccounts: [
-        {
-          name: 'Facebook',
-          url: 'https://www.facebook.com/',
-        },
-        {
-          name: 'Twitter',
-          url: 'https://www.twitter.com/',
-        },
-      ],
-    },
-    {
-      name: 'Kashyap',
-      age: 19,
-      socialAccounts: [
-        {
-          name: 'Twitter',
-          url: 'https://www.twitter.com/',
-        },
-      ],
-    },
-    {
-      name: 'Krupa',
-      age: 20,
-      socialAccounts: [
-        {
-          name: 'Facebook',
-          url: 'https://www.facebook.com/',
-        },
-      ],
-    },
-    {
-      name: 'Maitri',
-      age: 5,
-      socialAccounts: [
-        {
-          name: 'Facebook',
-          url: 'https://www.facebook.com/',
-        },
-      ],
-    },
-  ];
+  color = 'red';
+  backgroundColor = 'yellow';
+
+  changeColor() {
+    this.color = this.color === 'red' ? 'white' : 'red';
+
+    this.backgroundColor =
+      this.backgroundColor === 'yellow' ? 'black' : 'yellow';
+  }
 }
