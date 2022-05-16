@@ -6,15 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'Style Binding';
-
-  color = 'red';
-  backgroundColor = 'yellow';
-
-  changeColor() {
-    this.color = this.color === 'red' ? 'white' : 'red';
-
-    this.backgroundColor =
-      this.backgroundColor === 'yellow' ? 'black' : 'yellow';
-  }
+  title = 'Header ';
 }
