@@ -1,7 +1,13 @@
 <h1 class="heading">{{ title }}</h1>
 
-<!-- interpolation example -->
-<input type="text" name="user-name" value={{userValues}} disabled={{disabled}}>
-<br>
-<!-- property binding example -->
-<input type="text" name="user-email" [value]="userValues" [disabled]=disabled>
+<h1 *ngIf="show=='show'; then ifBlock else elseBlock">
+  Learn Angular
+</h1>
+
+<ng-template #ifBlock>
+  <h1>'If' Condition</h1>
+</ng-template>
+
+<ng-template #elseBlock>
+  <h1>Else Condition</h1>
+</ng-template>

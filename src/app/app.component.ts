@@ -6,9 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'Proprty Binding ';
+  title = 'If-Else Condition';
 
-  userValues = 'Hello, World!';
-
-  disabled = false;
+  show = 'show';
 }
