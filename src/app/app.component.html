@@ -1,20 +1,5 @@
 <h1>{{ title }}</h1>
 
-<form #basicForm="ngForm" (ngSubmit)="getData(basicForm.value)">
-  <input type="text" ngModel name="userName" placeholder="Enter user name">
-  <br>
-  <br>
-  <input type="number" ngModel name="userAge" placeholder="Enter user age">
-  <br>
-  <br>
-  <input type="email" ngModel name="userEmail" placeholder="Enter user email">
-  <br>
-  <br>
-  <button type="submit">Submit</button>
-</form>
+<button (click)="tagHideAndShowFuncation()">Toggle</button>
 
-<ul>
-  <li>User Name: {{userGettedData.userName}}</li>
-  <li>User Age: {{userGettedData.userAge}}</li>
-  <li>User Email: {{userGettedData.userEmail}}</li>
-</ul>
+<h2 *ngIf="display">Element</h2>
