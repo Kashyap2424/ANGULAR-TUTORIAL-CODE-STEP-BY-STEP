@@ -1,6 +1,13 @@
 <h1 class="heading">{{ title }}</h1>
 
-<div *ngFor="let user of users">
-  <h2>Name is: {{ user.name }}</h2>
-  <p>Age is: {{ user.age }}</p>
-</div>
+<ul *ngFor="let user of users">
+  <li>Name is: {{ user.name }}</li>
+  <li>Age is: {{ user.age }}</li>
+  <li>Social Accounts:
+    <ul *ngFor="let social of user.socialAccounts">
+      <li>{{social.name}}</li>
+      <li>{{social.url}}</li>
+    </ul>
+  </li>
+
+</ul>
