@@ -1,45 +1,25 @@
 <div class="container">
   <h1 class="text-center my-5">{{ title }}</h1>
-  <div class="section-one my3">
-    <mat-slider min="1" max="100" step="1" value="50"></mat-slider>
-  </div>
 
-  <div class="section-two my-3">
-    <section>
-      <div class="example-label">Basic</div>
-      <div class="example-button-row">
-        <button mat-button>Basic</button>
-        <button mat-button color="primary">Primary</button>
-        <button mat-button color="accent">Accent</button>
-        <button mat-button color="warn">Warn</button>
-        <button mat-button disabled>Disabled</button>
-        <a mat-button href="https://www.google.com/" target="_blank">Link</a>
+  <div class="row g-0 justify-content-center">
+    <div class="card col-sm-12 col-md-4">
+      <div class="card-header">
+        <h3>Todo List</h3>
       </div>
-    </section>
-  </div>
 
-  <div class="section-three my4">
-    <section>
-      <div class="example-label">Raised</div>
-      <div class="example-button-row">
-        <button mat-raised-button>Basic</button>
-        <button mat-raised-button color="primary">Primary</button>
-        <button mat-raised-button color="accent">Accent</button>
-        <button mat-raised-button color="warn">Warn</button>
-        <button mat-raised-button disabled>Disabled</button>
-        <a mat-raised-button href="https://www.google.com/" target="_blank">Link</a>
+      <div class="card-body">
+        <div class="form-group">
+          <label for="todo mx-5">Todo</label>
+          <input type="text" class="form-control my-3" placeholder="Enter todo" #todo>
+        </div>
+        <button class="btn btn-primary" (click)="addTodo(todo.value)">Submit</button>
+
+        <div class="list-group mt-3">
+          <a *ngFor="let todo of list" class="list-group-item list-group-item-action" [class.completed]="todo.completed"
+            (click)="todo.completed = !todo.completed">
+            {{ todo.name }} <button class="btn btn-danger float-end" (click)="removeAddedTodo(todo.id)">Delete</button>
+          </a>
+        </div>
       </div>
-    </section>
+    </div>
   </div>
-
-
-  <div class="section-four my-4">
-    <p>
-      Button with a badge on the left
-      <button mat-raised-button color="primary" matBadge="8" matBadgePosition="before" matBadgeColor="accent">
-        Action
-      </button>
-    </p>
-  </div>
-
-</div>
