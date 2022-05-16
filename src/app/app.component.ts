@@ -6,7 +6,28 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'Switch cases';
+  title = 'For Loop';
 
-  color = 'blue';
+  users = [
+    {
+      name: 'Haresh',
+      age: 39,
+    },
+    {
+      name: 'Rita',
+      age: 38,
+    },
+    {
+      name: 'Kashyap',
+      age: 19,
+    },
+    {
+      name: 'Krupa',
+      age: 20,
+    },
+    {
+      name: 'Maitri',
+      age: 5,
+    },
+  ];
 }
