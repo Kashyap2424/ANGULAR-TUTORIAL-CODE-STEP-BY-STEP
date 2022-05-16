@@ -6,16 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'Basic styling rules in Angular';
-  data = 'New Data is here!';
+  title = 'Proprty Binding ';
 
-  counterValue = 0;
+  userValues = 'Hello, World!';
 
-  counterFuncation(parameter: string) {
-    if (parameter === 'increment') {
-      this.counterValue++;
-    } else {
-      this.counterValue--;
-    }
-  }
+  disabled = false;
 }

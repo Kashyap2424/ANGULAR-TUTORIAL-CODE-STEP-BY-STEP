@@ -1,10 +1,7 @@
-<style>
-  .heading {
-    color: blue;
-  }
-
-</style>
-
 <h1 class="heading">{{ title }}</h1>
 
-<app-login></app-login>
+<!-- interpolation example -->
+<input type="text" name="user-name" value={{userValues}} disabled={{disabled}}>
+<br>
+<!-- property binding example -->
+<input type="text" name="user-email" [value]="userValues" [disabled]=disabled>
