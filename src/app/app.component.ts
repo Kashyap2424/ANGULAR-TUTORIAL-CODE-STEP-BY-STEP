@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'Create Counter';
+  title = 'Basic styling rules in Angular';
   data = 'New Data is here!';
 
   counterValue = 0;
