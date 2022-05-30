@@ -6,16 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'Angular Make Custome Pipes';
+  title = 'Angular Template Driven Form';
 
-  user = {
-    name: 'John Doe',
-    age: 25,
-    address: {
-      street: '50 Main St',
-      city: 'Boston',
-      state: 'MA',
-    },
-    friends: ['Jane', 'Mark', 'Bob'],
-  };
+  userLogin(form: any) {
+    console.warn(form);
+  }
 }
