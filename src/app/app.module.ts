@@ -9,10 +9,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatButtonModule } from '@angular/material/button';
 import { MatBadgeModule } from '@angular/material/badge';
-import { USDTOINRPipe } from './customPipes/usdtoinr.pipe';
 
 @NgModule({
-  declarations: [AppComponent, USDTOINRPipe],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
