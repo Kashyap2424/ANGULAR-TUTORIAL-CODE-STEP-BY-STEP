@@ -6,11 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'Angular Basic Pipes';
+  title = 'Angular Advance Pipes';
 
-  today = new Date();
-
-  convertToUpperCase(value: string) {
-    return value.toLowerCase();
-  }
+  user = {
+    name: 'John Doe',
+    age: 25,
+    address: {
+      street: '50 Main St',
+      city: 'Boston',
+      state: 'MA',
+    },
+    friends: ['Jane', 'Mark', 'Bob'],
+  };
 }
