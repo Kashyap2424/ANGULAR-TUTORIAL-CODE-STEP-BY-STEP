@@ -6,32 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'Reusable Components';
+  title = 'Send Data Child Components To Parent Component';
 
-  userDetails = [
-    {
-      name: 'John Doe',
-      age: 25,
-      address: '123 Main St',
-      city: 'Anytown',
-      state: 'CA',
-      zip: 90210,
-    },
-    {
-      name: 'Jane Doe',
-      age: 32,
-      address: '456 Elm St',
-      city: 'Middletown',
-      state: 'NY',
-      zip: 45701,
-    },
-    {
-      name: 'James Doe',
-      age: 55,
-      address: '789 Broadway',
-      city: 'New York',
-      state: 'NY',
-      zip: 10001,
-    },
-  ];
+  // This is the funcation that we are sending to the child component
+  updateData(data: string) {
+    alert(data);
+  }
 }
