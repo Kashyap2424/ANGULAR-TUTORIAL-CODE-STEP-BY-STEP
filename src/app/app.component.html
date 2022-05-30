@@ -1,11 +1,4 @@
 <div class="container">
   <h1 class="text-center my-5">{{ title }}</h1>
-  <h1 class="text-center my-5">{{ title | uppercase }}</h1>
-  <h1 class="text-center my-5">{{ title | slice : 2 : 6 | uppercase}}</h1>
-
-  <h1 class="text-center my-5">{{ user | json |uppercase }}</h1>
-
-  <h2>{{2.3 | number : '3.3-5'}}</h2>
-
-  <h2>{{ 20 | currency : 'INR' }}</h2>
+  <h2 class="text-center">{{ 20 | USDTOINR : 77.55 }}</h2>
 </div>
