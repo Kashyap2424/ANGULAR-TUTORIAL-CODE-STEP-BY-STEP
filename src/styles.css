@@ -2,6 +2,10 @@
 /* Google Font's for application */
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
 
+* {
+  font-family: "Quicksand", sans-serif !important;
+}
+
 body {
   box-sizing: border-box;
   padding: 0;
@@ -12,7 +16,9 @@ body {
 html,
 body {
   height: 100%;
+  font-family: "Quicksand", sans-serif !important;
 }
 body {
   margin: 0;
+  font-family: "Quicksand", sans-serif !important;
 }

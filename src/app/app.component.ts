@@ -6,10 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'Send Data Child Components To Parent Component';
+  title = 'Two Way Binding';
 
-  // This is the funcation that we are sending to the child component
-  updateData(data: string) {
-    alert(data);
-  }
+  name: any;
 }
