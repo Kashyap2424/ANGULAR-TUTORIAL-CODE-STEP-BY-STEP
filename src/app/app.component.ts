@@ -6,9 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'Angular Template Reference Variable';
+  title = 'Basic Of TypeScript For Angular';
 
-  getData(data: HTMLInputElement) {
-    alert(data.value);
-  }
+  data: { name: string; phoneNumber: number } = { name: '', phoneNumber: 0 }; // typescript object declaration
+
+  item: string[] = ['item1', 'item2', 'item3']; // typescript array declaration
+
+  getData(data: { name: string; phoneNumber: number }) {
+    console.log(data);
+  } // typescript function declaration
 }
