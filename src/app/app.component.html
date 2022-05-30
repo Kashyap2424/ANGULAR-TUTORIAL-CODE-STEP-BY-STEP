@@ -1,5 +1,9 @@
 <div class="container">
   <h1 class="text-center my-5">{{ title }}</h1>
 
-  <app-user-details (updateDataEvent)="updateData($event)"></app-user-details>
+  <div class="col-3">
+    <h3 class="my-5">Updated Value From Input Box : {{name}}</h3>
+
+    <input class="form-control" type="text" [(ngModel)]="name">
+  </div>
 </div>
