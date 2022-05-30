@@ -1,3 +1,8 @@
-<input type="text" #input1>
+<div class="row m-0 text-center">
+    <form class="p-0 col-5 d-flex">
+        <input class="p-1 m-1 col-4 form-control" type="text" #input1>
 
-<button (click)="updateDataEvent.emit(input1.value)">Update Data Value</button>
+        <button class="p-1 m-1 col-4 btn btn-primary" (click)="updateDataEvent.emit(input1.value)">Update
+            Data Value</button>
+    </form>
+</div>
