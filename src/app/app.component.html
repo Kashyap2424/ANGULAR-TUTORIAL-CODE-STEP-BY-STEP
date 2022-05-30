@@ -1,25 +1,9 @@
 <div class="container">
   <h1 class="text-center my-5">{{ title }}</h1>
 
-  <div class="row g-0 justify-content-center">
-    <div class="card col-sm-12 col-md-4">
-      <div class="card-header">
-        <h3>Todo List</h3>
-      </div>
+  <app-child [childComponentTitleProps]="childComponentTitle"></app-child>
 
-      <div class="card-body">
-        <div class="form-group">
-          <label for="todo mx-5">Todo</label>
-          <input type="text" class="form-control my-3" placeholder="Enter todo" #todo>
-        </div>
-        <button class="btn btn-primary" (click)="addTodo(todo.value)">Submit</button>
-
-        <div class="list-group mt-3">
-          <a *ngFor="let todo of list" class="list-group-item list-group-item-action" [class.completed]="todo.completed"
-            (click)="todo.completed = !todo.completed">
-            {{ todo.name }} <button class="btn btn-danger float-end" (click)="removeAddedTodo(todo.id)">Delete</button>
-          </a>
-        </div>
-      </div>
-    </div>
+  <div class="col-12 d-flex justify-content-center my-5">
+    <button class="btn btn-primary" (click)="updateChildComponentData()">Update title of child compoent</button>
   </div>
+</div>
