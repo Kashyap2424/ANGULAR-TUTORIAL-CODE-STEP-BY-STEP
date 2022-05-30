@@ -6,7 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'Two Way Binding';
+  title = 'Angular Template Reference Variable';
 
-  name: any;
+  getData(data: HTMLInputElement) {
+    alert(data.value);
+  }
 }
