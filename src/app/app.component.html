@@ -1,28 +1,18 @@
-<div>
-  <header>
-    <nav class="navbar navbar-expand-lg bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand text-black" routerLink="">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link active text-black-50" aria-current="page" routerLink="">Home</a>
-            <a class="nav-link text-black-50" routerLink="about">About</a>
-            <a class="nav-link text-black-50" routerLink="user">User</a>
-            <a class="nav-link text-black-50" routerLink="user/20">User - 20</a>
-            <a class="nav-link text-black-50" routerLink="user/40">User - 40</a>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </header>
-</div>
-
 <div class="container">
   <h1 class="text-center my-5">{{ title }}</h1>
 
-  <router-outlet></router-outlet>
+  <div class="text-center">
+    <ul *ngFor="let userInfo of memberData" style="list-style: none;">
+      <li>{{userInfo.name}}</li>
+      <li>{{userInfo.email}}</li>
+    </ul>
+  </div>
+</div>
+
+<div class="w-100 row p-5 g-0 bg-primary bg-gradient text-white position-fixed bottom-0">
+  <div class="col-12 d-flex justify-content-center align-items-center">
+    <footer class="text-center">
+      <app-footer></app-footer>
+    </footer>
+  </div>
 </div>
