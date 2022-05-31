@@ -13,9 +13,19 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { UserComponent } from './user/user.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AboutCompanyComponent } from './about-company/about-company.component';
+import { AboutMeComponent } from './about-me/about-me.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, AboutComponent, UserComponent, PageNotFoundComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    AboutComponent,
+    UserComponent,
+    PageNotFoundComponent,
+    AboutCompanyComponent,
+    AboutMeComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
