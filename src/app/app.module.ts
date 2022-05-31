@@ -12,9 +12,10 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { UserComponent } from './user/user.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, AboutComponent, UserComponent],
+  declarations: [AppComponent, HomeComponent, AboutComponent, UserComponent, PageNotFoundComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

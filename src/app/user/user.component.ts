@@ -9,7 +9,11 @@ import { ActivatedRoute } from '@angular/router';
 export class UserComponent implements OnInit {
   constructor(private route: ActivatedRoute) {}
 
+  idOfCurrentUser = `User Id Is : ${this.route.snapshot.paramMap.get(
+    'userId'
+  )}`;
+
   ngOnInit(): void {
-    console.warn(`User Id Is: ${this.route.snapshot.paramMap.get('userId')}`);
+    console.warn(this.idOfCurrentUser);
   }
 }
