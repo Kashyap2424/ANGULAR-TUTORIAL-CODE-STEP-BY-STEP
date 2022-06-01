@@ -1,3 +1,12 @@
 <div class="container">
-  <h1 class="text-center my-5">{{ title }}</h1>
+  <h1 class="text-center mt-5">{{ title }}</h1>
+
+  <div class="text-center">
+    <a class="btn btn-primary m-3" routerLink="login">Admin Login</a>
+    <a class="btn btn-primary m-3" routerLink="list">Admin List</a>
+  </div>
+</div>
+
+<div class="container">
+  <router-outlet></router-outlet>
 </div>
