@@ -2,11 +2,8 @@
   <h1 class="text-center mt-5">{{ title }}</h1>
 
   <div class="text-center">
-    <a class="btn btn-primary m-3" routerLink="admin/login">Admin Login</a>
-    <a class="btn btn-primary m-3" routerLink="admin/list">Admin List</a>
-
-    <a class="btn btn-primary m-3" routerLink="user/login">User Login</a>
-    <a class="btn btn-primary m-3" routerLink="user/list">User List</a>
+    <button class="btn btn-primary m-3" (click)="loadAdminList()">Load Admin List</button>
+    <button class="btn btn-primary m-3" (click)="loadUserList()">Load User List</button>
   </div>
 </div>
 
