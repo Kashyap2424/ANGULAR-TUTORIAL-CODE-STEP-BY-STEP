@@ -1,18 +1,30 @@
 <div class="container">
   <h1 class="text-center my-5">{{ title }}</h1>
 
-  <div class="text-center">
-    <ul *ngFor="let userInfo of memberData" style="list-style: none;">
-      <li>{{userInfo.name}}</li>
-      <li>{{userInfo.email}}</li>
-    </ul>
-  </div>
-</div>
+  <div class="row g-3 d-flex justify-content-start">
+    <div class="col-4 mt-3 d-block" *ngFor="let user of users">
+      <div class="card h-12rem" style="height: 19rem;">
+        <div class="card-header">
+          <h3 class="m-0">User Id - {{ user.id }}</h3>
+        </div>
 
-<div class="w-100 row p-5 g-0 bg-primary bg-gradient text-white position-fixed bottom-0">
-  <div class="col-12 d-flex justify-content-center align-items-center">
-    <footer class="text-center">
-      <app-footer></app-footer>
-    </footer>
+        <div class="card-body" style="min-height: 12rem;">
+          <p>User Name : {{ user.name }}</p>
+          <p>User Email : {{ user.email }}</p>
+          <p>User Phone Number : {{ user.phone }}</p>
+          <p>User Website : <a href=`${user.website}`>{{ user.website }}</a></p>
+          <p *ngIf="user.company">User Company : {{user.company.name}}</p>
+        </div>
+
+        <div class="card-footer m-0 d-flex align-items-center" style="height: 3rem;" *ngIf="user.address">
+          <p class="my-0"><span class="text-muted">User Address :</span> {{ user.address.street }}, {{
+            user.address.suite
+            }}, {{
+            user.address.city }},
+            {{
+            user.address.zipcode }}</p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

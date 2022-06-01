@@ -1,5 +1,5 @@
 import { Component, enableProdMode } from '@angular/core';
-import { MemberDataService } from './services/member-data.service';
+import { UserDataService } from './service/user-data.service';
 
 @Component({
   selector: 'app-root',
@@ -7,13 +7,14 @@ import { MemberDataService } from './services/member-data.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'Angular What We Services';
+  title = 'Call API In Angular';
 
-  memberData: any;
+  users: any = [{}];
 
-  constructor(private memberDataService: MemberDataService) {
-    console.log(memberDataService.members());
-
-    this.memberData = memberDataService.members();
+  constructor(private userData: UserDataService) {
+    userData.users().subscribe((data) => {
+      this.users = data;
+      console.log(this.users);
+    });
   }
 }
