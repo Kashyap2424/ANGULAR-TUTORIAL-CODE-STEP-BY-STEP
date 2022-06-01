@@ -5,10 +5,17 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AdminModule } from './admin/admin.module';
+import { UserModule } from './user/user.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, NgbModule, AdminModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NgbModule,
+    AdminModule,
+    UserModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
