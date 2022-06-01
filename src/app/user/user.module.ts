@@ -5,15 +5,10 @@ import { UserRoutingModule } from './user-routing.module';
 import { ListComponent } from './list/list.component';
 import { LoginComponent } from './login/login.component';
 
+console.log('User Module Loaded');
 
 @NgModule({
-  declarations: [
-    ListComponent,
-    LoginComponent
-  ],
-  imports: [
-    CommonModule,
-    UserRoutingModule
-  ]
+  declarations: [ListComponent, LoginComponent],
+  imports: [CommonModule, UserRoutingModule],
 })
-export class UserModule { }
+export class UserModule {}
