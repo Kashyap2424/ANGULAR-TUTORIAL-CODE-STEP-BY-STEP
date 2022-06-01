@@ -1,29 +1,24 @@
-import { Component, OnInit } from '@angular/core';
-import { UserDataService } from './service/user-data.service';
+import { Component } from '@angular/core';
+import userModeldataType from './model/user-model';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent implements OnInit {
-  title = 'Call POST API In Angular';
+export class AppComponent {
+  title = 'Angular Model & Interface';
+  getData() {
+    const data: userModeldataType = {
+      id: 1,
+      name: 'Manish',
+      indian: true,
+      address: {
+        city: 'Mumbai',
+        state: 'Maharashtra',
+      },
+    }; // dataType interface
 
-  users: any = [{}];
-  userData: any = [{}];
-
-  constructor(private UserDataService: UserDataService) {
-    this.userData = UserDataService.users();
-  }
-  ngOnInit(): void {
-    this.userData.subscribe((data: any) => {
-      this.users = data;
-      console.log(data);
-    });
-  }
-  getUserFormData(data: any) {
-    this.UserDataService.saveUserInfo(data).subscribe((data: any) => {
-      this.users = data;
-    });
+    return data;
   }
 }
