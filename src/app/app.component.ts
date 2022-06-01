@@ -5,5 +5,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'Angular Routing Module Example';
+  title = 'Angular Group Routing';
 }
