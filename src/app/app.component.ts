@@ -9,5 +9,5 @@ import {
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'Angular First Unit Test Case';
+  title = 'Angular Component Unite Testing';
 }

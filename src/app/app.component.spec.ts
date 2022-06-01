@@ -16,9 +16,9 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'Angular First Unit Test Case'`, () => {
+  it(`should have as title 'Angular Component Unite Testing'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('Angular First Unit Test Case');
+    expect(app.title).toEqual('Angular Component Unite Testing');
   });
 });
