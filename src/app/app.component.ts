@@ -1,4 +1,4 @@
-import { Component, enableProdMode } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { UserDataService } from './service/user-data.service';
 
 @Component({
@@ -6,15 +6,24 @@ import { UserDataService } from './service/user-data.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
-  title = 'Call API In Angular';
+export class AppComponent implements OnInit {
+  title = 'Call POST API In Angular';
 
   users: any = [{}];
+  userData: any = [{}];
 
-  constructor(private userData: UserDataService) {
-    userData.users().subscribe((data) => {
+  constructor(private UserDataService: UserDataService) {
+    this.userData = UserDataService.users();
+  }
+  ngOnInit(): void {
+    this.userData.subscribe((data: any) => {
       this.users = data;
-      console.log(this.users);
+      console.log(data);
+    });
+  }
+  getUserFormData(data: any) {
+    this.UserDataService.saveUserInfo(data).subscribe((data: any) => {
+      this.users = data;
     });
   }
 }
