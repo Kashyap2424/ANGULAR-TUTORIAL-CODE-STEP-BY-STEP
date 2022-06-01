@@ -1,9 +1,61 @@
 <div class="container">
   <h1 class="text-center my-5">{{ title }}</h1>
 
+  <div class="row g-3 d-flex">
+    <div class="col-8 mb-3 d-block">
+      <div class="card">
+        <div class="card-header">
+          <h2 class="m-0">{{title}}</h2>
+        </div>
+        <div class="card-body">
+          <form #userInfoForm="ngForm" (ngSubmit)="getUserFormData(userInfoForm.value)">
+            <div class="row">
+              <div class="col-6">
+                <div class="form-group mt-2">
+                  <label for="userName">User Name</label>
+                  <input type="text" name="userName" class="form-control" aria-describedby="emailHelp"
+                    placeholder="Enter user name" ngModel>
+                </div>
+                <div class="form-group mt-2">
+                  <label for="userEmail">Email Address</label>
+                  <input type="email" name="userEmail" class="form-control" placeholder="Enter email address" ngModel>
+                </div>
+                <div class="form-group mt-2">
+                  <label for="userPhoneNumber">Phone Number</label>
+                  <input type="number" name="userPhoneNumber" class="form-control" placeholder="Enter phone number"
+                    ngModel>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-group mt-2">
+                  <label for="userWebsiteURL">Website URL</label>
+                  <input type="url" name="userWebsiteURL" class="form-control" aria-describedby="emailHelp"
+                    placeholder="Enter website URL" ngModel>
+                </div>
+                <div class="form-group mt-2">
+                  <label for="userComapnyName">User Comapny Name</label>
+                  <input type="text" name="userComapnyName" class="form-control" placeholder="Enter Comapny Name"
+                    ngModel>
+                </div>
+                <div class="form-group mt-2">
+                  <label for="userAddress">User Address</label>
+                  <textarea rows="7" name="userAddress" class="form-control" placeholder="Enter User's Address"
+                    ngModel></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="mt-3 form-group">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="row g-3 d-flex justify-content-start">
     <div class="col-4 mt-3 d-block" *ngFor="let user of users">
-      <div class="card h-12rem" style="height: 19rem;">
+      <div class="card" style="height: 19rem;">
         <div class="card-header">
           <h3 class="m-0">User Id - {{ user.id }}</h3>
         </div>

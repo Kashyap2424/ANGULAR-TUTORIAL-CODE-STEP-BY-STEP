@@ -10,4 +10,11 @@ export class UserDataService {
   users() {
     return this.httpURL.get('https://jsonplaceholder.typicode.com/users');
   }
+
+  saveUserInfo(userInfo: any) {
+    return this.httpURL.post(
+      'https://jsonplaceholder.typicode.com/users',
+      userInfo
+    );
+  }
 }
